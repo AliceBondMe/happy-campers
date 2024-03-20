@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/650.e8984307.chunk.js","mappings":"sIAIA,UAJsB,WACpB,OAAOA,EAAAA,EAAAA,KAAA,MAAAC,SAAI,yBACb,C","sources":["pages/CataloguePage.jsx"],"sourcesContent":["const CataloguePage = () => {\n  return <h2>This is CataloguePage</h2>;\n};\n\nexport default CataloguePage;\n"],"names":["_jsx","children"],"sourceRoot":""}

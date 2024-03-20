@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkhappy_campers=self.webpackChunkhappy_campers||[]).push([[650],{650:function(e,a,s){s.r(a);var p=s(184);a.default=function(){return(0,p.jsx)("h2",{children:"This is CataloguePage"})}}}]);
+//# sourceMappingURL=650.e8984307.chunk.js.map

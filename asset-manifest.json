@@ -1,13 +1,25 @@
 {
   "files": {
-    "main.css": "/happy-campers/static/css/main.7acaea2f.css",
-    "main.js": "/happy-campers/static/js/main.07d3183d.js",
+    "main.css": "/happy-campers/static/css/main.f43b1b20.css",
+    "main.js": "/happy-campers/static/js/main.31033856.js",
+    "static/js/983.fb1e61e9.chunk.js": "/happy-campers/static/js/983.fb1e61e9.chunk.js",
+    "static/js/650.e8984307.chunk.js": "/happy-campers/static/js/650.e8984307.chunk.js",
+    "static/js/697.125e159b.chunk.js": "/happy-campers/static/js/697.125e159b.chunk.js",
+    "static/js/520.222c5634.chunk.js": "/happy-campers/static/js/520.222c5634.chunk.js",
+    "static/media/Inter-SemiBold.ttf": "/happy-campers/static/media/Inter-SemiBold.6058d3da655fb35169c2.ttf",
+    "static/media/Inter-Medium.ttf": "/happy-campers/static/media/Inter-Medium.3f7acfe50aad7ad68548.ttf",
+    "static/media/Inter-Regular.ttf": "/happy-campers/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
+    "static/media/icons-sprite.svg": "/happy-campers/static/media/icons-sprite.7f354c364888d8120f716526bd40078c.svg",
     "index.html": "/happy-campers/index.html",
-    "main.7acaea2f.css.map": "/happy-campers/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/happy-campers/static/js/main.07d3183d.js.map"
+    "main.f43b1b20.css.map": "/happy-campers/static/css/main.f43b1b20.css.map",
+    "main.31033856.js.map": "/happy-campers/static/js/main.31033856.js.map",
+    "983.fb1e61e9.chunk.js.map": "/happy-campers/static/js/983.fb1e61e9.chunk.js.map",
+    "650.e8984307.chunk.js.map": "/happy-campers/static/js/650.e8984307.chunk.js.map",
+    "697.125e159b.chunk.js.map": "/happy-campers/static/js/697.125e159b.chunk.js.map",
+    "520.222c5634.chunk.js.map": "/happy-campers/static/js/520.222c5634.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/css/main.f43b1b20.css",
+    "static/js/main.31033856.js"
   ]
 }

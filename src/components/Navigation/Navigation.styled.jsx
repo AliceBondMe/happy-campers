@@ -13,6 +13,7 @@ export const Nav = styled.nav`
 
 export const LinkStyled = styled(NavLink)`
   &.active {
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    text-shadow: 1px 1px 12px;
   }
 `;

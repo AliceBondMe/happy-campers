@@ -38,7 +38,7 @@ export const Header = () => {
   return (
     <HeaderStyled>
       <Link to={'/'}>
-        <Icon name={'icon-alcove'} width={28} height={28} />
+        <Icon name="icon-alcove" width={28} height={28} />
         HappyCampers
       </Link>
       <NavBlock>{!isMobile && <Navigation />}</NavBlock>

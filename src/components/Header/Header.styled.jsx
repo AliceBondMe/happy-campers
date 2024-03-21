@@ -13,8 +13,16 @@ export const HeaderStyled = styled.header`
   padding-left: 24px;
   padding-top: 12px;
   padding-bottom: 12px;
-  color: var(--text-main);
-  background: var(--button);
+  color: var(--white);
+  background: linear-gradient(
+    to right,
+    var(--header) 0%,
+    var(--header-accent) 15%,
+    var(--dark) 30%,
+    var(--dark) 70%,
+    var(--header-accent) 85%,
+    var(--header) 100%
+  );
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 
@@ -26,8 +34,8 @@ export const HeaderStyled = styled.header`
   }
 
   & svg {
-    stroke: var(--text-main);
-    fill: var(--text-main);
+    stroke: var(--white);
+    fill: var(--white);
   }
 `;
 

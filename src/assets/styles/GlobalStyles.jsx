@@ -10,10 +10,17 @@ export const GlobalStyle = createGlobalStyle`
           $theme === 'dark' ? '#1c2c49' : '#F2F4F7'};
         --text-main: ${({ $theme }) =>
           $theme === 'dark' ? '#ffffff' : '#101828'};
-        --text-light: #475467;
+        --card-border: ${({ $theme }) =>
+          $theme === 'dark' ? '#8a878780' : 'rgba(16, 24, 40, 0.2)'};
+        --text-light: ${({ $theme }) =>
+          $theme === 'dark' ? '#ccccccb9' : '#475467'};
         --button: #E44848;
         --button-hover: #D84343;
         --rating: #FFC531;
+        --white: #ffffff;
+        --dark: #101828;
+        --header: #1c2c49;
+        --header-accent: #152035;
         --transition-main: 300ms ease-in-out;
         
     }

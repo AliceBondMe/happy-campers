@@ -16,6 +16,7 @@ export const ImgWrap = styled.div`
   flex-shrink: 0;
   overflow: hidden;
   border-radius: 10px;
+  background-color: var(--bg-categories);
 
   & img {
     width: 100%;
@@ -44,13 +45,20 @@ export const HeaderWrap = styled.div`
   }
 `;
 
+export const Header = styled.h2`
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 370px;
+`;
+
 export const FavButton = styled.button`
   padding: 0;
   background-color: transparent;
 
   & svg {
-    fill: none;
-    stroke: var(--text-main);
+    fill: ${({ $isFav }) => ($isFav ? 'var(--button)' : 'none')};
+    stroke: ${({ $isFav }) => ($isFav ? 'var(--button)' : 'var(--text-main)')};
   }
 `;
 
@@ -102,13 +110,7 @@ export const Description = styled.p`
   color: var(--text-light);
 `;
 
-export const CatecoriesList = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-`;
-
-export const MoreButton = styled.button`
+export const Button = styled.button`
   padding: 16px 40px;
   border-radius: 200px;
   width: 166px;

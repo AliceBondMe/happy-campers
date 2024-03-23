@@ -5,15 +5,19 @@ export const GlobalStyle = createGlobalStyle`
         --bg-main: ${({ $theme }) =>
           $theme === 'dark' ? '#101828' : '#ffffff'};
         --bg-input: ${({ $theme }) =>
-          $theme === 'dark' ? '#152035' : '#F7F7F7'};
+          $theme === 'dark' ? '#151e2d' : '#F7F7F7'};
         --bg-categories: ${({ $theme }) =>
-          $theme === 'dark' ? '#1c2c49' : '#F2F4F7'};
+          $theme === 'dark' ? '#222d43' : '#F2F4F7'};
+        --bg-modal: ${({ $theme }) =>
+          $theme === 'dark' ? '#182336' : '#ffffff'};
         --text-main: ${({ $theme }) =>
           $theme === 'dark' ? '#ffffff' : '#101828'};
         --card-border: ${({ $theme }) =>
           $theme === 'dark' ? '#8a878780' : 'rgba(16, 24, 40, 0.2)'};
         --text-light: ${({ $theme }) =>
           $theme === 'dark' ? '#ccccccb9' : '#475467'};
+        --scroll: ${({ $theme }) =>
+          $theme === 'dark' ? '#515050b8' : '#D9D9D9'};
         --button: #E44848;
         --button-hover: #D84343;
         --rating: #FFC531;
@@ -21,6 +25,7 @@ export const GlobalStyle = createGlobalStyle`
         --dark: #101828;
         --header: #1c2c49;
         --header-accent: #152035;
+        --backdrop: rgba(17, 18, 19, 0.40);
         --transition-main: 300ms ease-in-out;
         
     }
@@ -73,5 +78,18 @@ export const GlobalStyle = createGlobalStyle`
         max-width: 100%;
         height: auto;
         border: none;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    } 
+
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--scroll);
+      border-radius: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: transparent;
     }
 `;

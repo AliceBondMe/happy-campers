@@ -6,8 +6,8 @@ const Navigation = ({ closeMobileMenu }) => {
       <LinkStyled to="/" onClick={closeMobileMenu}>
         Home
       </LinkStyled>
-      <LinkStyled to="catalogue" onClick={closeMobileMenu}>
-        Catalogue
+      <LinkStyled to="catalog" onClick={closeMobileMenu}>
+        Catalog
       </LinkStyled>
       <LinkStyled to="favorites" onClick={closeMobileMenu}>
         Favorites

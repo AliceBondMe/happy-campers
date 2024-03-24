@@ -1,16 +1,23 @@
+import { fadeInScale } from 'assets/styles/GlobalStyles';
 import styled from 'styled-components';
 
 export const ModalContainer = styled.div`
-  width: 982px;
+  width: 90%;
   max-height: 90vh;
   border-radius: 20px;
   overflow-y: scroll;
   scroll-behavior: smooth;
-  padding: 40px;
+  padding: 12px;
   background-color: var(--bg-modal);
+  animation: ${fadeInScale} 700ms ease-in-out;
 
   &::-webkit-scrollbar-track {
     margin: 12px 0;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 982px;
+    padding: 40px;
   }
 `;
 
@@ -34,9 +41,13 @@ export const HeaderWrap = styled.div`
 `;
 
 export const Header = styled.div`
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.25;
+
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 export const CloseBtn = styled.button`
@@ -45,8 +56,8 @@ export const CloseBtn = styled.button`
   justify-content: center;
   margin-left: auto;
   padding: 0;
-  width: 32px;
-  height: 32px;
+  width: 20px;
+  height: 20px;
   background-color: transparent;
   color: var(--text-main);
   border: none;
@@ -55,26 +66,46 @@ export const CloseBtn = styled.button`
   & svg {
     stroke: var(--text-main);
   }
+
+  @media screen and (min-width: 768px) {
+    width: 32px;
+    height: 32px;
+  }
 `;
 
 export const Price = styled.p`
-  margin-top: 16px;
-  margin-bottom: 24px;
-  font-size: 24px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.25;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    font-size: 24px;
+  }
 `;
 
 export const Gallery = styled.ul`
   display: flex;
-  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
   justify-content: center;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
+
+  @media screen and (min-width: 1440px) {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
 `;
 
 export const ImageWrap = styled.li`
-  width: 284px;
-  height: 310px;
+  width: 100%;
+  height: 200px;
   flex-shrink: 0;
   overflow: hidden;
   border-radius: 10px;
@@ -85,9 +116,29 @@ export const ImageWrap = styled.li`
     height: 100%;
     object-fit: cover;
   }
+
+  @media screen and (min-width: 500px) {
+    height: 300px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 700px;
+    height: 400px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 284px;
+    height: 310px;
+  }
 `;
 
 export const Description = styled.p`
   color: var(--text-light);
-  margin-bottom: 44px;
+  margin-bottom: 20px;
+  font-size: 12px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    margin-bottom: 44px;
+  }
 `;

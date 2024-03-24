@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, keyframes } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
     :root {
@@ -92,4 +92,37 @@ export const GlobalStyle = createGlobalStyle`
     ::-webkit-scrollbar-track {
       background-color: transparent;
     }
+`;
+
+export const fadeInLeft = keyframes`
+  from {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
+export const fadeInRight = keyframes`
+  from {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
+export const fadeInScale = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-100vh) scale(0.1)
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1)
+  }
 `;

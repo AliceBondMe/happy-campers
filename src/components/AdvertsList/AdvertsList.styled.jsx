@@ -1,3 +1,4 @@
+import { fadeInRight } from 'assets/styles/GlobalStyles';
 import styled from 'styled-components';
 
 export const Wrap = styled.div`
@@ -5,19 +6,24 @@ export const Wrap = styled.div`
   flex-direction: column;
   gap: 50px;
   align-items: center;
+  animation: ${fadeInRight} 1s ease-in-out;
 `;
 
 export const List = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 20px;
+
+  @media screen and (min-width: 768px) {
+    gap: 32px;
+  }
 `;
 
 export const LoadMoreButton = styled.button`
-  padding: 16px 32px;
+  padding: 8px 20px;
   border-radius: 200px;
   width: max-content;
-  height: 56px;
+  height: 44px;
   background-color: inherit;
   border: 1px solid var(--card-border);
   color: inherit;
@@ -27,5 +33,10 @@ export const LoadMoreButton = styled.button`
 
   &:hover {
     border: 1px solid var(--button);
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 16px 32px;
+    height: 56px;
   }
 `;

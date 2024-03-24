@@ -5,22 +5,37 @@ import styled from 'styled-components';
 export const Wrap = styled.div`
   display: flex;
   flex-direction: column;
-  width: calc((100% - 24px) / 2);
+  width: 100%;
   height: max-content;
   border-radius: 10px;
   border: 1px solid var(--card-border);
-  padding: 24px;
+  padding: 14px;
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 24px) / 2);
+    padding: 24px;
+  }
 `;
 
 export const Header = styled.h3`
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 8px;
 
   & + p {
     color: var(--text-light);
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+    font-size: 14px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
   }
 `;
 
@@ -29,21 +44,35 @@ export const InputField = styled(Field)`
   border-radius: 10px;
   background-color: var(--bg-input) !important;
   color: var(--text-main);
-  padding: 18px;
-  margin-bottom: 14px;
+  padding: 8px;
+  margin-bottom: 8px;
   border: none;
   line-height: 1.25;
+  font-size: 14px;
+
+  @media screen and (min-width: 768px) {
+    padding: 18px;
+    margin-bottom: 14px;
+    font-size: 16px;
+  }
 `;
 
 export const DateInput = styled(DatePicker)`
-  width: 385px;
+  width: 100%;
   border-radius: 10px;
   background-color: var(--bg-input);
   color: var(--text-main);
-  padding: 18px;
-  margin-bottom: 14px;
+  padding: 8px;
+  margin-bottom: 8px;
   border: none;
   line-height: 1.25;
+  font-size: 14px;
+
+  @media screen and (min-width: 768px) {
+    padding: 18px;
+    margin-bottom: 14px;
+    font-size: 16px;
+  }
 `;
 
 export const DateInputWrap = styled.div`
@@ -52,11 +81,16 @@ export const DateInputWrap = styled.div`
 
 export const IconWrap = styled.div`
   position: absolute;
-  top: 18px;
+  top: 8px;
   right: 18px;
 
   & svg {
     stroke: var(--text-main);
+  }
+
+  @media screen and (min-width: 768px) {
+    top: 18px;
+    right: 18px;
   }
 `;
 

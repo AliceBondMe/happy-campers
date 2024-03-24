@@ -5,6 +5,7 @@ export const Wrap = styled.div`
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
+  overflow-x: hidden;
 `;
 
 export const Main = styled.main`
@@ -14,5 +15,9 @@ export const Main = styled.main`
 export const Container = styled.div`
   width: 100%;
   height: 100%;
-  padding: 100px 64px;
+  padding: 12px;
+
+  @media screen and (min-width: 768px) {
+    padding: 32px 64px;
+  }
 `;

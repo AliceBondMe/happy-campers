@@ -3,7 +3,7 @@ import { Text } from 'components/SearchLocation/SearchLocation.styled';
 import { useDispatch } from 'react-redux';
 import { setFiltersAction } from '../../redux/advertsSlice';
 import { Icon } from 'components/Icon/Icon';
-import { IconWrap, InputGroup, SubTitle } from './Filters.styled';
+import { IconWrap, InputGroup, ResetButton, SubTitle } from './Filters.styled';
 
 export const Filters = () => {
   const dispatch = useDispatch();
@@ -21,11 +21,19 @@ export const Filters = () => {
     dispatch(setFiltersAction(filters));
   };
 
+  const resetForm = () => {
+    dispatch(setFiltersAction(null));
+    const formElement = document.getElementById('filtersForm');
+    if (formElement) {
+      formElement.reset();
+    }
+  };
+
   return (
     <div>
       <Text>Filters</Text>
 
-      <form onSubmit={handleSubmit}>
+      <form id="filtersForm" onSubmit={handleSubmit}>
         <SubTitle>Vehicle equipment</SubTitle>
 
         <InputGroup>
@@ -98,6 +106,9 @@ export const Filters = () => {
         </InputGroup>
 
         <Button type="submit">Search</Button>
+        <ResetButton type="button" onClick={resetForm}>
+          Reset
+        </ResetButton>
       </form>
     </div>
   );

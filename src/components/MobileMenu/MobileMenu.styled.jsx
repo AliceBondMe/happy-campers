@@ -1,3 +1,4 @@
+import { fadeInRight } from 'assets/styles/GlobalStyles';
 import styled from 'styled-components';
 
 export const MenuContainer = styled.div`
@@ -12,4 +13,5 @@ export const MenuContainer = styled.div`
   gap: 36px;
   padding-top: 160px;
   background-color: var(--bg-main);
+  animation: ${fadeInRight} 700ms ease-in-out;
 `;

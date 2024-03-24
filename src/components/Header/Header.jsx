@@ -8,11 +8,11 @@ import { IoIosClose, IoIosMenu } from 'react-icons/io';
 import { Icon } from 'components/Icon/Icon';
 
 export const Header = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [isMobileMenulOpen, setIsMobileMenulOpen] = useState(false);
 
   const handleResize = () => {
-    window.innerWidth < 640 ? setIsMobile(true) : setIsMobile(false);
+    window.innerWidth < 768 ? setIsMobile(true) : setIsMobile(false);
   };
 
   useEffect(() => {
@@ -23,16 +23,14 @@ export const Header = () => {
     };
   }, []);
 
-  useEffect(() => {
-    if (isMobileMenulOpen) document.body.style.overflow = 'hidden';
-
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isMobileMenulOpen]);
+  const openMobileMenu = () => {
+    setIsMobileMenulOpen(true);
+    document.body.style.overflow = 'hidden';
+  };
 
   const closeMobileMenu = () => {
     setIsMobileMenulOpen(false);
+    document.body.style.overflow = '';
   };
 
   return (
@@ -58,7 +56,7 @@ export const Header = () => {
           <MenuButton
             type="button"
             aria-label="open menu"
-            onClick={() => setIsMobileMenulOpen(true)}
+            onClick={openMobileMenu}
           >
             <IoIosMenu />
           </MenuButton>

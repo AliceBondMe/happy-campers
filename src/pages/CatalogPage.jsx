@@ -5,7 +5,7 @@ import { selectError, selectFilteredAdverts } from '../redux/selectors';
 import { AdvertsList } from 'components/AdvertsList/AdvertsList';
 import { DetailesModal } from 'components/DetailsModal/DetailsModal';
 import { Sidebar } from 'components/Sidebar/Sidebar';
-import { Wrap } from './Pages.styled';
+import { ErrorMessage, Wrap } from './Pages.styled';
 import { setFiltersAction } from '../redux/advertsSlice';
 
 const CatalogPage = () => {
@@ -26,22 +26,28 @@ const CatalogPage = () => {
   const openModal = item => {
     setIsShowModal(true);
     setCurrentAdvert(item);
+    document.body.style.overflow = 'hidden';
   };
 
   const closeModal = () => {
     setIsShowModal(false);
     setCurrentAdvert(null);
+    document.body.style.overflow = '';
   };
 
   return (
     <Wrap>
       {error ? (
-        <p>It seems that something went wrong... Please try again later</p>
+        <ErrorMessage>
+          It seems that something went wrong... Please try again later
+        </ErrorMessage>
       ) : (
         <>
           <Sidebar />
           {!filteredAdverts.length ? (
-            <p>There are no campers that meet your requirements</p>
+            <ErrorMessage>
+              There are no campers that meet your requirements
+            </ErrorMessage>
           ) : (
             <AdvertsList adverts={filteredAdverts} openModal={openModal} />
           )}

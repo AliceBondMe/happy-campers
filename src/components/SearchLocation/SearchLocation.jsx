@@ -2,7 +2,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectLocation } from '../../redux/selectors';
 import { setLocationAction } from '../../redux/advertsSlice';
 import { Icon } from 'components/Icon/Icon';
-import { IconWrap, Input, InputWrap, Text } from './SearchLocation.styled';
+import {
+  IconWrap,
+  Input,
+  InputWrap,
+  Text,
+  Wrap,
+} from './SearchLocation.styled';
 
 export const SearchLocation = () => {
   const dispatch = useDispatch();
@@ -13,7 +19,7 @@ export const SearchLocation = () => {
   };
 
   return (
-    <>
+    <Wrap>
       <Text>Location</Text>
       <InputWrap>
         <Input
@@ -26,6 +32,6 @@ export const SearchLocation = () => {
           <Icon name={'icon-location'} width={20} height={20} />
         </IconWrap>
       </InputWrap>
-    </>
+    </Wrap>
   );
 };

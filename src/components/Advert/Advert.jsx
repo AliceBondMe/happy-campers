@@ -9,6 +9,8 @@ import {
   InfoWrap,
   MainWrap,
   Button,
+  PriceWrap,
+  Wrap,
 } from './Advert.styled';
 import { MainFeaturesList } from 'components/MainFeaturesList/MainFeaturesList';
 import { useDispatch, useSelector } from 'react-redux';
@@ -43,10 +45,10 @@ export const Advert = ({ data, openModal }) => {
         <img src={gallery[0]} alt={name} />
       </ImgWrap>
       <MainWrap>
-        <div>
+        <Wrap>
           <HeaderWrap>
             <Header>{name}</Header>
-            <div>
+            <PriceWrap>
               <p>€{price}.00</p>
               <FavButton
                 type="button"
@@ -56,7 +58,7 @@ export const Advert = ({ data, openModal }) => {
               >
                 <Icon name="icon-heart" width={24} height={24} />
               </FavButton>
-            </div>
+            </PriceWrap>
           </HeaderWrap>
           <InfoWrap>
             <p>
@@ -70,7 +72,7 @@ export const Advert = ({ data, openModal }) => {
               {location}
             </p>
           </InfoWrap>
-        </div>
+        </Wrap>
         <Description>{description}</Description>
         <MainFeaturesList data={data} />
         <Button type="button" onClick={() => openModal(data)}>

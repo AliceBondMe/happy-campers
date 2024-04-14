@@ -31,6 +31,11 @@ export const HeaderStyled = styled.header`
     display: flex;
     align-items: flex-end;
     gap: 4px;
+    transition: text-shadow var(--transition-main);
+
+    &:hover {
+      text-shadow: 1px 1px 12px;
+    }
   }
 
   & svg {
@@ -57,5 +62,10 @@ export const MenuButton = styled.button`
   & svg {
     width: 100%;
     height: 100%;
+    transition: fill var(--transition-main);
+  }
+
+  &:hover svg {
+    fill: var(--button);
   }
 `;

@@ -65,7 +65,7 @@ export const DetailesModal = ({ data, closeModal }) => {
             {location}
           </p>
         </InfoWrap>
-        <Price>€{price}.00</Price>
+        <Price>€{price.toFixed(2)}</Price>
         <Gallery>
           {gallery.slice(0, 3).map((item, idx) => (
             <ImageWrap key={nanoid()}>

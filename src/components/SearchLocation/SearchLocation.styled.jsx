@@ -13,6 +13,10 @@ export const Text = styled.p`
 
 export const InputWrap = styled.div`
   position: relative;
+
+  & svg {
+    transition: stroke var(--transition-main);
+  }
 `;
 
 export const Input = styled.input`
@@ -25,6 +29,10 @@ export const Input = styled.input`
   line-height: 1.25;
   margin-bottom: 32px;
   position: relative;
+
+  &:focus + div > svg {
+    stroke: var(--button);
+  }
 
   @media screen and (min-width: 768px) {
     font-size: 16px;

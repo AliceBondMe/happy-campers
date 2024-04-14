@@ -49,7 +49,7 @@ export const Advert = ({ data, openModal }) => {
           <HeaderWrap>
             <Header>{name}</Header>
             <PriceWrap>
-              <p>€{price}.00</p>
+              <p>€{price.toFixed(2)}</p>
               <FavButton
                 type="button"
                 aria-label="Add to favorites"

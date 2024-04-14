@@ -3,8 +3,7 @@ import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { FilterButton, ModalFilter } from './Filters.styled';
 import { Filters } from './Filters';
-import { LuFilterX } from 'react-icons/lu';
-
+import { IoClose } from 'react-icons/io5';
 const modalRoot = document.querySelector('#modal-root');
 
 export const MobileFilters = ({ closeFilter }) => {
@@ -35,7 +34,7 @@ export const MobileFilters = ({ closeFilter }) => {
           aria-label="close filter"
           onClick={closeFilter}
         >
-          <LuFilterX />
+          <IoClose />
         </FilterButton>
         <Filters />
       </ModalFilter>

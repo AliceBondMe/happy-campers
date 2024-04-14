@@ -65,6 +65,11 @@ export const CloseBtn = styled.button`
 
   & svg {
     stroke: var(--text-main);
+    transition: stroke var(--transition-main);
+  }
+
+  & svg:hover {
+    stroke: var(--button);
   }
 
   @media screen and (min-width: 768px) {

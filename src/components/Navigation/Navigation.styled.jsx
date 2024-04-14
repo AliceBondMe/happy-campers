@@ -12,8 +12,11 @@ export const Nav = styled.nav`
 `;
 
 export const LinkStyled = styled(NavLink)`
-  &.active {
-    /* text-decoration: underline; */
+  transition: text-shadow var(--transition-main), color var(--transition-main);
+
+  &.active,
+  &:hover {
     text-shadow: 1px 1px 12px;
+    color: var(--button);
   }
 `;

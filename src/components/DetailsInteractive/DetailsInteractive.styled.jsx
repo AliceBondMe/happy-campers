@@ -32,6 +32,11 @@ export const TabButton = styled.button`
   font-size: 16px;
   font-weight: 600;
   line-height: 1.2;
+  transition: color var(--transition-main);
+
+  &:hover {
+    color: var(--button);
+  }
 
   &::after {
     content: '';

@@ -128,7 +128,7 @@ export const ModalFilter = styled.div`
   max-height: 90vh;
   border-radius: 20px;
   scroll-behavior: smooth;
-  padding: 10px;
+  padding: 12px;
   background-color: var(--bg-modal);
   animation: ${fadeInScale} 700ms ease-in-out;
 `;
@@ -148,10 +148,10 @@ export const FilterButton = styled.button`
   & svg {
     width: 100%;
     height: 100%;
-    transition: stroke var(--transition-main);
+    transition: color var(--transition-main);
   }
 
   &:hover svg {
-    stroke: var(--button);
+    color: var(--button);
   }
 `;

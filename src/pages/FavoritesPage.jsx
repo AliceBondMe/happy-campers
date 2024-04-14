@@ -1,26 +1,13 @@
 import { useSelector } from 'react-redux';
-import { useState } from 'react';
 import { selectFavorites } from '../redux/selectors';
 import { AdvertsList } from 'components/AdvertsList/AdvertsList';
 import { DetailesModal } from 'components/DetailsModal/DetailsModal';
 import { ErrorMessage } from './Pages.styled';
+import { useShowModal } from 'hooks/useShowModal';
 
 const FavoritesPage = () => {
-  const [isShowModal, setIsShowModal] = useState(false);
-  const [currentAdvert, setCurrentAdvert] = useState(null);
   const favorites = useSelector(selectFavorites);
-
-  const openModal = item => {
-    setIsShowModal(true);
-    setCurrentAdvert(item);
-    document.body.style.overflow = 'hidden';
-  };
-
-  const closeModal = () => {
-    setIsShowModal(false);
-    setCurrentAdvert(null);
-    document.body.style.overflow = '';
-  };
+  const { isShowModal, currentAdvert, openModal, closeModal } = useShowModal();
 
   return (
     <>

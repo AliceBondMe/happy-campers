@@ -111,6 +111,11 @@ export const FavButton = styled.button`
   & svg {
     fill: ${({ $isFav }) => ($isFav ? 'var(--button)' : 'none')};
     stroke: ${({ $isFav }) => ($isFav ? 'var(--button)' : 'var(--text-main)')};
+    transition: stroke var(--transition-main);
+  }
+
+  & svg:hover {
+    stroke: var(--button);
   }
 `;
 
